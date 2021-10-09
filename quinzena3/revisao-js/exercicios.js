@@ -180,24 +180,41 @@ function ordenaArray(array) {
   // EXERCÍCIO 12
   function filmeFavorito() {
 
-    let object = {
+    let filme = {
       nome: "O Diabo Veste Prada",
       ano: 2006,
       diretor: 'David Frankel',
-      atores: ('Meryl Streep', 'Anne Hathaway', 'Emily Blunt', 'Stanley Tucci')
-    }
+      atores: ['Meryl Streep', 'Anne Hathaway', 'Emily Blunt', 'Stanley Tucci']
+      }
 
+    return filme  
 
   }
 
   // EXERCÍCIO 13
   function imprimeChamada() {
     // "Venha assistir ao filme NOME_DO_FILME, de ANO, dirigido por DIRECAO e estrelado por ELENCO."
+    let objeto = {
+      nome: "O Diabo Veste Prada",
+      ano: 2006,
+      diretor: 'David Frankel',
+      atores: ['Meryl Streep' ,' Anne Hathaway',' Emily Blunt',' Stanley Tucci']
+      
+            }
+      return(`Venha assistir ao filme ${objeto.nome}, de ${objeto.ano}, dirigido por ${objeto.diretor} e estrelado por ${objeto.atores}.`)
+
   }
 
   // EXERCÍCIO 14
   function criaRetangulo(lado1, lado2) {
-
+    let objeto = {
+      largura: (lado1),
+      altura: (lado2),
+      perimetro: 2 * (lado1 + lado2),
+      area: (lado1 * lado2)
+    
+    }
+    return objeto        
   }
 
   // EXERCÍCIO 15
@@ -208,16 +225,34 @@ function ordenaArray(array) {
 
   // EXERCÍCIO 16A
   function maioresDe18(arrayDePessoas) {
+ 
+     const arrayNovo = arrayDePessoas.filter((item) => {
+     return item.idade >= 18
 
-  }
-
+      })
+      return arrayNovo
+    }
   // EXERCÍCIO 16B
   function menoresDe18(arrayDePessoas) {
 
-  }
+    const menor = arrayDePessoas.filter((item) => {
+      return item.idade < 18
+ 
+       })
+       return menor
+     }
+  
 
   // EXERCÍCIO 17A
   function multiplicaArrayPor2(array) {
+    const numeros = [2, 4, 6, 8, 10, 12]
+  
+      for (let array of numeros) {
+      numeros = numero * 2
+                
+      }
+        
+    return array
 
   }
 
@@ -233,6 +268,12 @@ function ordenaArray(array) {
 
   // EXERCÍCIO 18A
   function retornaPessoasAutorizadas(pessoas) {
+    if (pessoas => 1.5 === 14 <= 60) {
+      console.log("Pessoas Autorizadas")
+    } else {
+      console.log("Não autorizadas")
+
+    }
 
   }
 
