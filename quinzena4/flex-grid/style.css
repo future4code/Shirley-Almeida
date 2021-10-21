@@ -26,11 +26,10 @@ main{
    display: flex;
    margin: 0 auto;
    
-   
-   
+     
 } 
 
-#m-lateral{
+#menu-lateral{
     /* display: flex; */
     background-color: #f2d0e0;
     /* width: 500px; */
@@ -40,7 +39,7 @@ main{
     
 }
 
-#m-princ{
+#menu-principal{
     display: flex;
     text-align: center;
     margin: 10px 15px;
