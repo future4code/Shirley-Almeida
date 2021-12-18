@@ -25,7 +25,7 @@ class TelaListaDePlaylists extends React.Component {
           }
         )
         .then(() => {
-          alert("Usuário apagado com sucesso!");
+          alert("Playlist apagado com sucesso!");
           this.props.pegaPlaylists();
         })
         .catch((err) => {
