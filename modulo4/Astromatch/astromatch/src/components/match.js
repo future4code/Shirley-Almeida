@@ -14,41 +14,71 @@ const Box = styled.div`
   border-radius: 5px;
 `;
 
-function Match(props) {
-  const [fotos, setFotos] = useState({});
+const Box2 = styled.div `
+overflow: hidden;
+width: 400px;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+`
+
+function Match() {
+
+  const [usuario, setUsuario] = useState({});
+  const [listaMatch, setListaMatch] = useState([]);
+
+  const pegaFotos = async () => {
+    await axios
+      .get(
+        `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/almeida/person`
+      )
+      .then((response) => {
+        setUsuario(response.data.profile);
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  };
 
   useEffect(() => {
     pegaFotos();
-  }, [fotos]);
-  const pegaFotos = () => {
-    axios.get(
-      `https://us-central1-missao-newton.cloudfunctions.net/astroMatch/almeida/person`
-    ).then((response) => {
-        setFotos(response.data.profile)
-        
-    })
-    .catch((error) => {
-        console.log(error)
-    })
-  };
+  }, []);
 
-    // const fotoAlet = "https://picsum.photos/200/300"
+const gostei = (id) => {
+  const body = {
+    id: usuario.id, 
+    choice: true
+  }
+  axios.post("https://us-central1-missao-newton.cloudfunctions.net/astroMatch/almeida/choose-person", 
+  body,
+  {
+    headers:{
+      Autorization:"almeida"
+    }
+  }
+  ).then(res=>{
+    // setListaMatch(res.data)
+    console.log(res.data)
+  }).catch(error=>{
+    alert("erro")
+  })
 
-   const novasFotos = (new) => {
-       const news = fotos.map((new) => {
-        return console.log(new)
-          
-       })
-   }
+}
 
   return (
-
     <Box>
-          <Cabeca/>
-         
-      {/* <img src= {fotoAlet} /> */}
+      <Cabeca />
+      <Box2>
+        <img src={usuario.photo} />
+      </Box2>
+        <p>{usuario.bio}</p>
+        <p>{usuario.name}, {usuario.age} </p>
+        <button onClick={() => gostei(usuario.id)}>match</button>
+        <button>X</button>
     </Box>
   );
 }
+
 
 export default Match;

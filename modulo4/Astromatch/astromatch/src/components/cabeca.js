@@ -40,19 +40,7 @@ function Cabeca() {
 
       </Container>
 
-      {/* {mudaTela ? (
-        setmudaTela(
-          <Container>
-            <div>
-              <Carinhas src="/img/carinhas.jpeg" />
-            </div>
-          </Container>
-        )
-      ) : (
-        <div>
-          <Carinhas src="/img/carinhas.jpeg" />
-        </div>
-      )} */}
+      
     </CardContainer>
   );
 }
