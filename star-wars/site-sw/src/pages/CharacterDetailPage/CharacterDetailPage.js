@@ -1,12 +1,14 @@
 import React from "react"
 
-export default class CharacterDetailPage extends React.Component {
-  render() {
-    return (
+ function CharacterDetailPage() {  {
+      return (
       <div>
         <h1> CharacterListPage </h1>
-        <button onClick={() => this.props.goToPage("Lista")}>ListPage</button>
+        <button onClick={() => this.props.goToPage("Lista")}>Voltar para lista de personagens</button>
       </div>
     );
-  }
+  
 }
+ }
+
+ export default CharacterDetailPage

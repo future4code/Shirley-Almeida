@@ -24,9 +24,10 @@ function CharacterListPage(props) {
   }, [])
 
   const lista = list.length && list.map((character) => {
+    console.log(character)
     return (
-      <p>{character.name}</p>
-    )
+      <button onClick={() => props.goToPage("Detalhe")}>{character.name}</button>
+    ) 
   })
 
   return (
