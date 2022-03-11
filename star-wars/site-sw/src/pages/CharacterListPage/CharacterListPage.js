@@ -26,7 +26,7 @@ function CharacterListPage(props) {
   const lista = list.length && list.map((character) => {
     console.log(character)
     return (
-      <button onClick={() => props.goToPage("Detalhe")}>{character.name}</button>
+      <button onClick={() => props.goToPage()}>{character.name}</button>
     ) 
   })
 
@@ -34,7 +34,7 @@ function CharacterListPage(props) {
     <div>
       <h1> CharacterListPage </h1>
       {lista}
-      <button onClick={() => props.goToPage("Detalhe")}>DetailPage</button>
+      <button onClick={() => props.goToPage()}>DetailPage</button>
     </div>
   )
 
