@@ -1,0 +1,22 @@
+###
+ GET http://localhost:3003/payment/c4d57717-d7d3-425a-b5e4-642f24b1fed9
+
+###
+ POST http://localhost:3003/user/register
+ Content-Type: application/json
+
+{
+    "nameUser": "Carlos Silva",
+    "email": "carlos.silva@me.com",
+    "cpf": "123.456.789-10"
+}
+
+
+###
+ POST http://localhost:3003/payment/c4d57717-d7d3-425a-b5e4-642f24b1fed9
+ Content-Type: application/json
+
+{
+    "buyType":"credit card" ,
+    "amount": 10000
+}
