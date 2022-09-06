@@ -1,0 +1,17 @@
+###
+GET http://localhost:3003/dogs/13987255-d823-4cf3-8358-a5105339b319
+
+
+###
+ POST http://localhost:3003/dogs/create-tour
+ Content-Type: application/json
+
+{
+    "duration": 60, 
+    "price": 35, 
+    "quantityPets": 2,
+    "startWalk": 13,
+    "finishWalk": 13.30,
+    "latitude": "gdgsdfgfjdgfgiurgforgi",
+    "longitude": "brgirhgirhgopghfogfho"
+}
